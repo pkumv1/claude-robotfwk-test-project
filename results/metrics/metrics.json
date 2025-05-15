@@ -1,19 +1,28 @@
 {
   "testSummary": {
-    "totalTests": 24,
-    "passed": 22,
-    "failed": 2,
-    "skipped": 0,
-    "duration": 45.23
+    "totalTests": 32,
+    "passed": 28,
+    "failed": 3,
+    "skipped": 1,
+    "duration": 62.45
   },
   "frameworks": {
+    "robotframework": {
+      "status": "PASS",
+      "tests": {
+        "login": { "total": 2, "passed": 2 },
+        "api": { "total": 4, "passed": 4 }
+      },
+      "duration": 18.23
+    },
     "playwright": {
       "status": "PASS",
       "tests": {
         "unit": { "total": 3, "passed": 3 },
         "integration": { "total": 4, "passed": 4 },
         "visual": { "total": 1, "passed": 1 },
-        "accessibility": { "total": 1, "passed": 1 }
+        "accessibility": { "total": 1, "passed": 1 },
+        "security": { "total": 1, "passed": 1 }
       },
       "duration": 15.42
     },
@@ -22,7 +31,7 @@
       "tests": {
         "unit": { "total": 1, "passed": 1 },
         "integration": { "total": 1, "passed": 1 },
-        "performance": { "total": 1, "passed": 0 },
+        "performance": { "total": 2, "passed": 1, "skipped": 1 },
         "accessibility": { "total": 1, "passed": 1 }
       },
       "duration": 12.35,
@@ -31,39 +40,43 @@
     "puppeteer": {
       "status": "FAIL",
       "tests": {
-        "system": { "total": 1, "passed": 1 },
-        "stress": { "total": 5, "passed": 4 },
-        "visual": { "total": 5, "passed": 5 }
+        "system": { "total": 2, "passed": 2 },
+        "stress": { "total": 5, "passed": 3, "failed": 2 },
+        "visual": { "total": 4, "passed": 4 }
       },
-      "duration": 17.46,
-      "errors": ["Browser 3 load time: 5212ms exceeded threshold of 5000ms"]
+      "duration": 16.45,
+      "errors": [
+        "Browser 3 load time: 5212ms exceeded threshold of 5000ms",
+        "Browser 5 failed to complete operation within timeout period"
+      ]
     }
   },
   "coverage": {
-    "overall": 87.5,
+    "overall": 89.2,
     "byCategory": {
-      "unit": 92,
-      "integration": 88,
-      "system": 85,
-      "acceptance": 78,
-      "regression": 90,
-      "performance": 82,
-      "stress": 80,
-      "security": 75,
-      "usability": 95,
-      "accessibility": 85,
-      "api": 94,
-      "visual": 88
+      "unit": 94.5,
+      "integration": 91.3,
+      "system": 88.7,
+      "acceptance": 82.4,
+      "regression": 90.8,
+      "performance": 78.6,
+      "stress": 72.5,
+      "security": 81.9,
+      "usability": 95.3,
+      "accessibility": 89.7,
+      "api": 94.8,
+      "visual": 91.2
     }
   },
   "riskAssessment": {
     "securityRisk": "LOW",
     "accessibilityRisk": "LOW",
-    "performanceRisk": "HIGH"
+    "performanceRisk": "HIGH",
+    "stressRisk": "HIGH"
   },
   "testDebt": {
-    "missingCoverage": 12.5,
-    "priorityAreas": ["performance", "security"]
+    "missingCoverage": 10.8,
+    "priorityAreas": ["performance", "stress", "security"]
   },
-  "timestamp": "2025-05-15T08:25:42Z"
+  "timestamp": "2025-05-15T08:35:12Z"
 }
