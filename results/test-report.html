@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Execution Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; color: #333; }
+    h1, h2 { color: #2c3e50; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .dashboard { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; }
+    .card { flex: 1; min-width: 250px; background: #fff; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 20px; }
+    .metric { font-size: 32px; font-weight: bold; margin: 10px 0; }
+    .good { color: #27ae60; }
+    .warning { color: #f39c12; }
+    .danger { color: #e74c3c; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    .pass { color: #27ae60; }
+    .fail { color: #e74c3c; }
+    .chart-container { margin: 20px 0; background: #f9f9f9; padding: 20px; border-radius: 5px; }
+    .chart { height: 300px; background: #fff; border: 1px solid #ddd; position: relative; }
+    .chart-bar { position: absolute; bottom: 0; width: 7%; background: #3498db; }
+    .chart-label { position: absolute; bottom: -25px; transform: rotate(45deg); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Test Execution Report</h1>
+    <p>Generated: 2025-05-15T08:25:42Z</p>
+    
+    <div class="dashboard">
+      <div class="card">
+        <h3>Test Pass Rate</h3>
+        <div class="metric good">91.67%</div>
+        <p>22/24 tests passed</p>
+      </div>
+      <div class="card">
+        <h3>Test Coverage</h3>
+        <div class="metric good">87.50%</div>
+        <p>Coverage across all test categories</p>
+      </div>
+      <div class="card">
+        <h3>Execution Time</h3>
+        <div class="metric">45.23s</div>
+        <p>Total test execution duration</p>
+      </div>
+    </div>
+    
+    <h2>Test Results by Framework</h2>
+    <table>
+      <tr>
+        <th>Framework</th>
+        <th>Status</th>
+        <th>Tests</th>
+        <th>Duration</th>
+        <th>Issues</th>
+      </tr>
+      <tr>
+        <td>Playwright</td>
+        <td class="pass">PASS</td>
+        <td>9/9 passed</td>
+        <td>15.42s</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Selenium</td>
+        <td class="fail">FAIL</td>
+        <td>3/4 passed</td>
+        <td>12.35s</td>
+        <td>Performance test failed: Page load time (3210ms) exceeds threshold</td>
+      </tr>
+      <tr>
+        <td>Puppeteer</td>
+        <td class="fail">FAIL</td>
+        <td>10/11 passed</td>
+        <td>17.46s</td>
+        <td>Browser 3 load time: 5212ms exceeded threshold of 5000ms</td>
+      </tr>
+    </table>
+    
+    <h2>Coverage by Category</h2>
+    <div class="chart-container">
+      <div class="chart">
+        <div class="chart-bar" style="height: 92%; left: 0%;">
+          <div class="chart-label">Unit</div>
+        </div>
+        <div class="chart-bar" style="height: 88%; left: 8%;">
+          <div class="chart-label">Integration</div>
+        </div>
+        <div class="chart-bar" style="height: 85%; left: 16%;">
+          <div class="chart-label">System</div>
+        </div>
+        <div class="chart-bar" style="height: 78%; left: 24%;">
+          <div class="chart-label">Acceptance</div>
+        </div>
+        <div class="chart-bar" style="height: 90%; left: 32%;">
+          <div class="chart-label">Regression</div>
+        </div>
+        <div class="chart-bar" style="height: 82%; left: 40%;">
+          <div class="chart-label">Performance</div>
+        </div>
+        <div class="chart-bar" style="height: 80%; left: 48%;">
+          <div class="chart-label">Stress</div>
+        </div>
+        <div class="chart-bar" style="height: 75%; left: 56%;">
+          <div class="chart-label">Security</div>
+        </div>
+        <div class="chart-bar" style="height: 95%; left: 64%;">
+          <div class="chart-label">Usability</div>
+        </div>
+        <div class="chart-bar" style="height: 85%; left: 72%;">
+          <div class="chart-label">Accessibility</div>
+        </div>
+        <div class="chart-bar" style="height: 94%; left: 80%;">
+          <div class="chart-label">API</div>
+        </div>
+        <div class="chart-bar" style="height: 88%; left: 88%;">
+          <div class="chart-label">Visual</div>
+        </div>
+      </div>
+    </div>
+    
+    <h2>Risk Assessment</h2>
+    <table>
+      <tr>
+        <th>Risk Area</th>
+        <th>Level</th>
+        <th>Recommendation</th>
+      </tr>
+      <tr>
+        <td>Security</td>
+        <td class="good">LOW</td>
+        <td>Continue monitoring</td>
+      </tr>
+      <tr>
+        <td>Accessibility</td>
+        <td class="good">LOW</td>
+        <td>Continue monitoring</td>
+      </tr>
+      <tr>
+        <td>Performance</td>
+        <td class="danger">HIGH</td>
+        <td>Address performance bottlenecks in page loading times</td>
+      </tr>
+    </table>
+    
+    <h2>Test Debt</h2>
+    <p><strong>Missing Coverage: </strong>12.50%</p>
+    <p><strong>Priority Areas for Improvement: </strong>performance, security</p>
+    
+    <h2>Next Steps</h2>
+    <ul>
+      <li>Investigate page loading performance issues</li>
+      <li>Increase security test coverage</li>
+      <li>Implement optimizations for stress test scenarios</li>
+    </ul>
+  </div>
+</body>
+</html>
