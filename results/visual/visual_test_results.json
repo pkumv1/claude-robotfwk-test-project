@@ -1,0 +1,56 @@
+{
+  "visualTests": [
+    {
+      "name": "Dashboard Layout",
+      "baselineImage": "dashboard_baseline.png",
+      "currentImage": "dashboard-example.jpg",
+      "diffImage": "dashboard_diff.png",
+      "diffPercentage": 1.25,
+      "status": "PASS",
+      "timestamp": "2025-05-15T08:25:42Z"
+    },
+    {
+      "name": "User Profile Page",
+      "baselineImage": "profile_baseline.png",
+      "currentImage": "profile_current.png",
+      "diffImage": "profile_diff.png",
+      "diffPercentage": 0.5,
+      "status": "PASS",
+      "timestamp": "2025-05-15T08:25:45Z"
+    },
+    {
+      "name": "Login Form",
+      "baselineImage": "login_baseline.png",
+      "currentImage": "login_current.png",
+      "diffImage": "login_diff.png",
+      "diffPercentage": 0.0,
+      "status": "PASS",
+      "timestamp": "2025-05-15T08:25:48Z"
+    },
+    {
+      "name": "Navigation Menu",
+      "baselineImage": "nav_baseline.png",
+      "currentImage": "nav_current.png",
+      "diffImage": "nav_diff.png",
+      "diffPercentage": 3.2,
+      "status": "PASS",
+      "timestamp": "2025-05-15T08:25:51Z"
+    },
+    {
+      "name": "Search Results",
+      "baselineImage": "search_baseline.png",
+      "currentImage": "search_current.png",
+      "diffImage": "search_diff.png",
+      "diffPercentage": 4.8,
+      "status": "PASS",
+      "timestamp": "2025-05-15T08:25:54Z"
+    }
+  ],
+  "summary": {
+    "totalTests": 5,
+    "passed": 5,
+    "failed": 0,
+    "averageDiff": 1.95,
+    "threshold": 5.0
+  }
+}
